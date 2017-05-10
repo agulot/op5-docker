@@ -1,0 +1,12 @@
+version:  '2'
+
+services:
+   op5:
+     build: .
+     image: "${HOSTNAME}"
+     env_file:
+       - op5.env
+     extra_hosts:
+       - "ip-10-184-182-26.us-west-2.compute.internal:10.184.182.26"
+       - "ip-10-184-182-9.us-west-2.compute.internal:10.184.182.9"
+       - "$HOSTNAME:$MY_IPADDR" 
