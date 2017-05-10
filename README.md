@@ -9,12 +9,15 @@ deploy_docker.sh -r {type} -s {Site} -h {Hostname} -i {Host IP} -m {Master01_FQD
 ```
 <dl>
   <dt>EXAMPLE:
-	<dd>depoly_docker.sh -r poller -s PoP -n testpoller001 -i 4.4.4.4 -m op5-master001.op5.com,1.1.1.1,op5-master002.op5.com,2.2.2.2
+	<dd>```
+depoly_docker.sh -r poller -s PoP -n testpoller001 -i 4.4.4.4 -m op5-master001.op5.com,1.1.1.1,op5-master002.op5.com,2.2.2.2
+```
 </dl>
 
 > In this example an op5 poller named testpoller001 would be deployed to a server at ip 4.4.4.4 and connected to two masters.  One master named op5-master001.op5.com at IP 1.1.1.1 and another master named op5-master002.op5.com at IP 2.2.2.2
 
 ## Run
+> This is done automatically during the deploy_docker script
 ```
 run_op5.sh -n {Hostname}
 ```
