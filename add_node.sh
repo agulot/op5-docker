@@ -50,6 +50,6 @@ mon node ctrl $MY_HOSTNAME mon node add $OP5_MASTER type=master connect=no
 EOF
 
 scp  -o StrictHostKeyChecking=no /op5_sync.sh root@$OP5_MASTER:/root/op5_sync.sh
-ssh -o StrictHostKeyChecking=no root@$OP5_MASTER 'chmod +x /root/op5_sync.sh
+ssh -o StrictHostKeyChecking=no root@$OP5_MASTER 'chmod +x /root/op5_sync.sh'
 
 exit 0
