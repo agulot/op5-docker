@@ -2,11 +2,11 @@ FROM centos:6
 
 # Get OP5 software and install
 RUN yum -y install wget which openssh-server \
-&& wget http://repos.op5.com/tarballs/op5-monitor-7.3.11-20170428.tar.gz -O /tmp/op5-software.tar.gz \
+&& wget https://s3-eu-west-1.amazonaws.com/op5-filebase/Downloads/op5_monitor_archive/op5-monitor-7.3.17-20171013.tar.gz -O /tmp/op5-software.tar.gz \
 && tar -zxf /tmp/op5-software.tar.gz -C /tmp \
-&& cd /tmp/op5-monitor-7.3.11 && ./install.sh --silent \
+&& cd /tmp/op5-monitor-7.3.17 && ./install.sh --silent \
 && rm -f /tmp/op5-software.tar.gz \
-&& cd /tmp && rm -rf /tmp/op5-monitor-7.3.11 \
+&& cd /tmp && rm -rf /tmp/op5-monitor-7.3.17 \
 && yum clean all
 
 # execute any post install scripts or install any addition software we may want
